@@ -1,0 +1,31 @@
+---
+---
+
+// @import 'config';
+@import 'mixins';
+@import 'extends';
+
+
+a{
+  color: $font-color-a;
+  &:hover{
+    color: $font-color-a-hover;
+  }
+}
+
+body{
+  color: $font-color;
+}
+
+h2{
+  margin: 2em 0 1.5em 0;
+  font-size: 20px;
+
+  @include breakpoint(){
+    font-size: 24px;
+  };
+}
+
+p{
+  margin: 0 0 1em 0;
+}

@@ -1,4 +1,8 @@
 # frozen_string_literal: true
 
 source "https://rubygems.org"
-gemspec
+# gemspec
+group :jekyll_plugins do
+  gem 'jekyll-pug'
+  # Add other Jekyll plugins you are using below this line.
+end

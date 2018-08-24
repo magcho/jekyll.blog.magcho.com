@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+
+DOCTYPE(html)
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    title magchoの雑記
+
+    link(rel="stylesheet" href="{{'assets/css/style.css' | relateve_url}}")
+
+    meta(name="description" content="説明文")
+    meta(name="viewport" content="width=device-width")
+    link(rel="canonical" href="{{ page.url | replace:'index.html', '' | absolute_url}}")
+
+  body
+    header
+      div
+        .site-title
+          a(href="{{ '/' | relative_url}}") {{site.title}}
+        nav
+          ul
+            li.nav_item
+              a(href="{{ '/' | relative_url}}") Home
+            li.nav_item
+              a(href="{{ '/about' | relative_url}}") About
+
+    main
+      | {{ content }}
+    //- main
+    //-   article
+    //-     h1 記事タイトル
+    //-     p ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+    //-   article
+    //-     h1 記事タイトル
+    //-     p ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+    //-   article
+    //-     h1 記事タイトル
+    //-     p ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+
+
+    footer
+      p.copyright copyright 2018- {{site.author.name}}
+
+      div.social
+        | {% if site.author.github %}
+        p.item
+          a(href="https://github.com/{{site.author.github}}/") Github
+        | {% endif %}
+
+        | {% if site.author.twitter %}    
+        p.item
+          a(href="https://twitter.com/{{site.author.twitter}}/") Twitter  
+        | {% endif %}
+        
