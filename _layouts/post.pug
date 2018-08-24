@@ -1,0 +1,19 @@
+---
+layout: default
+---
+  
+article
+  .page-header
+    h1.title {{ page.title }}
+    p.date {{ page.date | date: '%B %d, %Y' }}
+    
+  .page-body
+    | {{ content }}
+
+  .pager
+    .next
+      a(href="") 次のページ
+      
+    .prev
+      a(href="") 前のページ
+      

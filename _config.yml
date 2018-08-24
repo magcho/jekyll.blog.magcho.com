@@ -1,0 +1,26 @@
+title: penguin
+descprition: >
+  ペンギンが好き
+
+baseurl: ""
+url: "https://blog.magcho.com"
+
+author:
+  name: magcho
+  email: mail@magcho.com
+  github: magcho
+  twitter: magcho0527
+
+paginate: 3
+paginate_path: page:num
+
+sass:
+  style: expanded  #整形
+  # style: compressed   #圧縮
+
+  gems:
+    - jekyll-pagenate
+    - jekyll-feed
+
+plugins:
+    - jekyll-pug
