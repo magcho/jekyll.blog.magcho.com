@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: base
 title: About
 description: プロフィールページのサンプルです｡よろしくお願いします｡
 permalink: /about/

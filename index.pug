@@ -1,7 +1,26 @@
 ---
-layout: default
+layout: base
 ---
 
-
-.front-page
-  | サンプル
+main
+  | {% for post in site.posts %}
+  article
+    .contnet-header
+      h1.title
+        a(href="{{ post.url | relateve_url }}") {{ post.title }}
+      .date
+        img(src="{{ 'assets/images/penguin-01.svg' | relateve_url }}")
+        p
+          time(datetime="{{ post.date | date: '%Y-%m-%d'}}") {{ post.date | date: '%m/%d' }}
+    .content-tags
+      ul
+        li
+          a(href="")  タグ
+        li
+          a タグ
+        li
+          a タグ
+    .content-body
+      .exprect
+        | {{ post.content }}
+  | {% endfor %}

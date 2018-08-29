@@ -1,4 +1,4 @@
-title: penguin
+title: サンプルタイトル
 descprition: >
   ペンギンが好き
 
@@ -11,16 +11,18 @@ author:
   github: magcho
   twitter: magcho0527
 
-paginate: 3
-paginate_path: page:num
+# paginate: 3
+# paginate_path: "page:num"
 
 sass:
   style: expanded  #整形
   # style: compressed   #圧縮
 
-  gems:
-    - jekyll-pagenate
-    - jekyll-feed
+
+gem:
+  - jekyll-feed
 
 plugins:
-    - jekyll-pug
+  # - jekyll-paginate
+  # - jekyll-feed
+  - jekyll-pug

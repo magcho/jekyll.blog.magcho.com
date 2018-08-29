@@ -1,0 +1,37 @@
+---
+---
+<!DOCTYPE html>
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    title {{ site.title }}
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" href="{{'assets/css/base.css' | relateve_url}}")
+    <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
+      
+  body
+    header
+      .title {{ site.title }}
+      slide.sns-link
+    
+    div.mainframe   
+      | {{ content }}
+        
+
+      aside.tag-link
+        h1.title タグ
+        ul
+          li
+            a(href="") タグ
+          li
+            a(href="") タグ
+          li
+            a(href="") タグ
+          li
+            a(href="") タグ
+          li
+            a(href="") タグ
+                    
+    footer
+      p.copyright
+        | (C)copyright magcho 2018-
