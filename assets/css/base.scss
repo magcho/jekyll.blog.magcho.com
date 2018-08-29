@@ -58,23 +58,19 @@ body {
       }
       h1 {
         font: {
-          // family: 'Times New Roman', '游明朝', 'YuMincho', 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', 'HG明朝E', 'メイリオ', 'Meiryo'\,'serif';
-          // weight: bold;
           size: 2em;
           family: "Mplus 1p";
           weight: inherit;
         }
         margin: 0;
-        // white-space: nowrap;
         word-break: normal;
-        // width: min-content;
         float: left;
         display: inline-block;
-        // height: 35px;
         line-height: 35px;
+        max-width: calc(100% - 107px);
         overflow: auto;
         a {
-          background-image: linear-gradient(to right, rgba(90,175,173,0.5) 0%, rgba(90,175,173,0.5) 100%);
+          background-image: linear-gradient(to right, #e4ff3c 0%, #e4ff3c  100%);
           background-position: 0 0.7em;
           background-repeat: repeat-x;
           background-size: 1px 15px;
@@ -93,7 +89,7 @@ body {
       .date {
         display: inline-block;
 
-        img {
+        .penguin-shadow {
           float: left;
           width: 107px;
           height: 35px;
@@ -108,38 +104,54 @@ body {
           text-align: center;
         }
       }
-
-      .content-tags {
-        ul {
-          margin: 0;
-          padding: 0;
-          list-style: none;
-          // text-decoration: underline;
-          li {
-            &:after {
-              content: ',';
-            }
-            float: left;
-          }
-
-          &:last-child {
-            content: '';
-          }
-        }
-      }
-
       .content-body {
         margin: {
-          top: 3 em;
+          top: 3em;
+        }
+      }
+      ul.content-tags {
+        &:after{
+          content: '';
+        }
+        margin: {
+          top: 1em;
+          bottom: 0;
+          left: 1em;
+        }
+        padding: 0;
+        list-style: none;
+        li {
+          &:after {
+            content: ',';
+          }
+          float: left;
+          a{
+            color: #0785ff;
+          }
+          &:last-child{
+            float: none;
+          }
+        }
+        &:last-child {
+          content: '';
         }
       }
     }
   }
 
-  aside.tag-link {
+  aside.tag-link,
+  aside.category-link {
+    box-sizing: border-box;
+    h1{
+      margin:{
+        bottom: 10px;
+      }
+    }
     ul {
       list-style: none;
-
+      margin:{
+        top: 0px;
+      }
       li {
         float: left;
         margin-right: 1em;
@@ -151,15 +163,26 @@ body {
         a {
           text-decoration: underline;
           color: #022547;
+          word-wrap: break-word;
+        }
+        &:last-child{
+          float: none;
         }
       }
     }
+  }
+  .tag-link{
+    position: relative;
+    top: 2em;
   }
 
   footer {
     width: 100%;
     height: 50px;
-    background-color: #022547;
+    background:{
+      color: #022547;
+      image: url('../images/penguin-01-white.svg');
+    }
 
     .copyright {
       line-height: 50px;

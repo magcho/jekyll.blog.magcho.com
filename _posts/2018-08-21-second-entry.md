@@ -1,6 +1,10 @@
 ---
 layout: post
 title: 初めのブログ投稿記事
+category: 舞台技術
+tags:
+- タグ２
+- タグ３
 ---
 
 second posts
