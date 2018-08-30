@@ -16,7 +16,8 @@
     "release:pug": "pug ./pug -o ./",
     "ws": "ws",
     "pug": "pug",
-    "sass": "node-sass"
+    "sass": "node-sass",
+    "autoprefixer": "postcss assets/css/base.css --use autoprefixer -o assets/css/base.css"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,11 @@
+{% if include.post-category == "舞台技術" %}
+{% assign postColor = "#7CB3D9" %}
+{% elsif include.post-category == "日記" %}
+{% assign postColor = "#9AF5A5" %}
+{% elsif include.post-category == "電子工作" %}
+{% assign postColor = "#F18AF2" %}
+{% elsif include.post-category == "プログラム" %}
+{% assign postColor = "#F29333" %}
+{% else %}
+{% assign postColor = "" %}
+{% endif %}
