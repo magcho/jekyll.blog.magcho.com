@@ -1,30 +1,76 @@
 ---
 ---
+// @import 'responsive';
+$breakpoints: (
+ 'sm': 'screen and (max-width: 768px)',
+ 'pc': 'screen and (min-width: 769px)'
+ // 'lg': 'screen and (min-width: 1000px)',
+ // 'xl': 'screen and (min-width: 1200px)',
+) !default;
+@mixin mq($breakpoint: sm) {
+ @media #{map-get($breakpoints, $breakpoint)} {
+   @content;
+ }
+}
+
+@mixin vertical-center($height){
+  height: $height;
+  line-height: $height;
+}
+
+
+
 body {
   margin: 0;
 
   .mainframe {
     margin-top: 2em;
-    overflow: auto;
+    // overflow: auto;
+    @include mq(pc){
+      overflow: auto;
+    }
+    // @include mq(pc){
+    //   margin-top: 2em;
+    // }
+    // @include mq(sm){
+    //   margin: 0;
+    // }
   }
 
   header {
-    height: 400px;
+    // height: 400px;
     width: 100%;
     background-color: #7CB3D9;
-    line-height: 400px;
-    font-size: 5em;
+    // line-height: 400px;
+    // font-size: 5em;
     font-family: monospace;
     color: white;
     font-weight: bold;
     text-align: center;
+    @include mq(pc){
+      font-size: 5em;
+      @include vertical-center(400px);
+    }
+    @include mq(sm){
+      font-size: 3em;
+      @include vertical-center(200px);
+    }
   }
 
   main {
-    width: 80%;
+    // width: 80%;
     box-sizing: border-box;
-    float: left;
-    padding: 0 2em;
+    // float: left;
+    // padding: 0 2em;
+    @include mq(pc){
+      float: left;
+      width: 80%;
+      padding: 0 2em;
+    }
+    @include mq(sm){
+      width: 100%;
+      padding: 0;
+    }
 
     article {
       margin: 2em 0;
@@ -58,7 +104,7 @@ body {
       }
       h1 {
         font: {
-          size: 2em;
+          // size: 2em;
           family: "Mplus 1p";
           weight: inherit;
         }
@@ -67,8 +113,15 @@ body {
         float: left;
         display: inline-block;
         line-height: 35px;
-        max-width: calc(100% - 107px);
+        // max-width: calc(100% - 107px);
         overflow: auto;
+        @include mq(pc){
+          max-width: calc(100% - 107px);
+          font-size: 2em;
+        }
+        @include mq(sm){
+          max-width: 100%;
+        }
         a {
           background-image: linear-gradient(to right, #e4ff3c 0%, #e4ff3c  100%);
           background-position: 0 0.7em;
@@ -90,23 +143,39 @@ body {
         display: inline-block;
 
         .penguin-shadow {
+          @include mq(sm){
+            display: none;
+          }
           float: left;
           width: 107px;
           height: 35px;
         }
 
         p {
-          position: absolute;
-          color: white;
-          width: 107px;
-          height: 35px;
-          line-height: 35px;
-          text-align: center;
+          @include mq(pc){
+            position: absolute;
+            color: white;
+            width: 107px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+          }
+          @include mq(sm){
+            color: black;
+          }
+
         }
       }
       .content-body {
-        margin: {
-          top: 3em;
+        @include mq(pc){
+          margin: {
+            top: 3em;
+          }
+        }
+        @include mq(sm){
+          margin: {
+            top: 2em;
+          }
         }
       }
       ul.content-tags {
@@ -141,6 +210,11 @@ body {
 
   aside.tag-link,
   aside.category-link {
+    @include mq(sm){
+      padding: {
+        left: 1em;
+      }
+    }
     box-sizing: border-box;
     h1{
       margin:{
@@ -172,8 +246,10 @@ body {
     }
   }
   .tag-link{
-    position: relative;
-    top: 2em;
+    @include mq(pc){
+      position: relative;
+      top: 2em;
+    }
   }
 
   footer {

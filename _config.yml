@@ -1,4 +1,4 @@
-title: サンプルタイトル
+title: magchoの雑記
 descprition: >
   ペンギンが好き
 
@@ -16,6 +16,7 @@ author:
 
 sass:
   style: expanded  #整形
+  sass_dir: _sass
   # style: compressed   #圧縮
 
 
