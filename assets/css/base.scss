@@ -251,6 +251,30 @@ body {
       top: 2em;
     }
   }
+  .pagenate{
+    @include mq(pc){
+      width: 70%;
+    }
+    margin:{
+      left: 3em;
+      right: 3em;
+    }
+    height: calc(60px + 1em);
+    img{
+      height: 60px;
+    }
+    p{
+      margin: {
+        top: 0px;
+      }
+    }
+    .previous{
+      float: left;
+    }
+    .next{
+      float: right;
+    }
+  }
 
   footer {
     width: 100%;
