@@ -178,6 +178,29 @@ body {
           }
         }
       }
+      .tag-list{
+        ul{
+          @include mq(pc){
+            padding: {
+              left: 40px;
+            }
+          }
+          @include mq(sm){
+            padding:{
+              left: 0;
+            }
+          }
+          list-style: none;
+          li{
+            a{
+              color: #022547;
+            }
+            margin:{
+              bottom: 0.8em;
+            }
+          }
+        }
+      }
       ul.content-tags {
         &:after{
           content: '';

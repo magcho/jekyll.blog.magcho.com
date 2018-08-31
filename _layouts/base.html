@@ -16,14 +16,22 @@
     <div class="mainframe">{{ content }}
       <aside class="category-link">
         <h1 class="title">Category</h1>
-        <ul>{% for category in site.categories %}
-          <li><a href="{{ category | first | relateve_url }}">{{ category | first }}</a></li>{% endfor %}
+        <ul>
+          {% for category in site.categories %}
+            {% assign categoryName = category[0] %}
+            {% include categoryRule.html post-category=categoryName %} <!-- Return: permalinkURL -->
+            <li>
+              <a href="{{site.baseurl}}/{{permalinkURL}}/">
+                {{ category[0] }}
+              </a>
+            </li>
+          {% endfor %}
         </ul>
       </aside>
       <aside class="tag-link">
         <h1 class="title">Tag</h1>
         <ul>{% for tag in site.tags %}
-          <li><a href="{{ tag | first | relateve_url }}">{{ tag | first }}</a></li>{% endfor %}
+          <li><a href="{{ site.baseurl }}/tags.html#{{ tag | first }}">{{ tag | first }}</a></li>{% endfor %}
         </ul>
       </aside>
     </div>

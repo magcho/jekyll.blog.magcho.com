@@ -8,7 +8,7 @@ pagination:
   {% include colorRule.html post-category = post.category %}
   <article>
     <div class="contnet-header">
-      <h1 class="title"><a href="{{ post.url | relateve_url }}" style="background-image: linear-gradient(to right, {{ postColor }} 0%, {{ postColor }} 100%);">{{ post.title }}</a></h1>
+      <h1 class="title"><a href="{{ post.url | relative_url }}" style="background-image: linear-gradient(to right, {{ postColor }} 0%, {{ postColor }} 100%);">{{ post.title }}</a></h1>
       <div class="date">{% include penguin-shadow.html penguinColor = postColor %}
         <p>
           <time datetime="{{ post.date | date: '%Y-%m-%d'}}">{{ post.date | date: '%m/%d' }}</time>
@@ -16,8 +16,14 @@ pagination:
       </div>
     </div>
     <div class="content-body">{{ post.content }}</div>
-    <ul class="content-tags">{% for tag in post.tags %}
-      <li><a href="{{site.baseurl}}/{{tag}}">{{ tag }}</a></li>{% endfor %}
+    <ul class="content-tags">
+      {% for tag in post.tags %}
+      <li>
+        <a href="{{site.baseurl}}/{{tag}}">
+          {{ tag }}
+        </a>
+      </li>
+      {% endfor %}
     </ul>
   </article>{% endfor %}
 </main>
