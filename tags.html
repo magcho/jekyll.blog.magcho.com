@@ -1,0 +1,31 @@
+---
+layout: base
+---
+<main>
+  <h1>タグ別記事</h1>
+  {% for tag in site.tags %}
+  <article id="{{tag[0]}}">
+    <div class="contnet-header" >
+      <h1 class="title">
+        <a>
+          {{ tag[0] }}
+        </a>
+      </h1>
+      <div class="date">
+        {% include penguin-shadow.html penguinColor = "#000" %}
+      </div>
+    </div>
+    <div class="content-body tag-list">
+      <ul>
+        {% for post in tag[1] %}
+        <li>
+          <a href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </article>
+  {% endfor %}
+</main>

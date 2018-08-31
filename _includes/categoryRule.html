@@ -1,11 +1,10 @@
 {% if include.post-category == "舞台技術" %}  <!-- stage -->
-{% assign postColor = "#7CB3D9" %}
+{% assign permalinkURL = "stage" %}
 {% elsif include.post-category == "日記" %}  <!-- diary -->
-{% assign postColor = "#9AF5A5" %}
+{% assign permalinkURL = "diary" %}
 {% elsif include.post-category == "電子工作" %} <!-- electronic -->
-{% assign postColor = "#F18AF2" %}
+{% assign permalinkURL = "electronic" %}
 {% elsif include.post-category == "プログラム" %} <!-- programming -->
-{% assign postColor = "#F29333" %}
+{% assign permalinkURL = "programming" %}
 {% else %}
-{% assign postColor = "" %}
 {% endif %}

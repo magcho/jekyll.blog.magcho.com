@@ -2,7 +2,7 @@
 layout: post
 title:  Rotary engine
 date:   2016-11-22 19:16:49 +0100
-categories: wikipedia
+categories: 日記
 ---
 
 _From Wikipedia, the free encyclopedia_

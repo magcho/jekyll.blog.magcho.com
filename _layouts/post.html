@@ -1,14 +1,21 @@
 ---
-layout: default
+layout: base
 ---
-<article>
-  <div class="page-header">
-    <h1 class="title">{{ page.title }}</h1>
-    <p class="date">{{ page.date | date: '%B %d, %Y' }}</p>
-  </div>
-  <div class="page-body">{{ content }}</div>
-  <div class="pager">
-    <div class="next"><a href="">次のページ</a></div>
-    <div class="prev"><a href="">前のページ</a></div>
-  </div>
-</article>
+
+<main>
+  {% include colorRule.html post-category = page.category %}
+  <article>
+    <div class="contnet-header">
+      <h1 class="title"><a href="{{ post.url | relative_url }}" style="background-image: linear-gradient(to right, {{ postColor }} 0%, {{ postColor }} 100%);">{{ page.title }}</a></h1>
+      <div class="date">{% include penguin-shadow.html penguinColor = postColor %}
+        <p>
+          <time datetime="{{ page.date | date: '%Y-%m-%d'}}">{{ page.date | date: '%m/%d' }}</time>
+        </p>
+      </div>
+    </div>
+    <div class="content-body">{{ content }}</div>
+    <ul class="content-tags">{% for tag in page.tags %}
+      <li><a href="{{site.baseurl}}/{{tag}}">{{ tag }}</a></li>{% endfor %}
+    </ul>
+  </article>
+</main>

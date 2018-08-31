@@ -1,7 +1,6 @@
 ---
 layout: post
 title: こんな感じでブログのタイトルはOK?
-category: stage
 tags:
 - タグ１
 - タグ２

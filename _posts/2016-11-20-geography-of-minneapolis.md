@@ -2,7 +2,7 @@
 layout: post
 title:  Geography of Minneapolis
 date:   2016-11-20 19:16:49 +0100
-categories: wikipedia
+categories: 舞台技術
 ---
 
 _From Wikipedia, the free encyclopedia_
