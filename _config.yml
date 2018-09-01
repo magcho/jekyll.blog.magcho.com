@@ -1,4 +1,10 @@
 title: magchoの雑記
+subtitle: magchoのなんでもブログ
+repository: magcho/jekyll-penguin
+author: magcho
+branch: master
+twitter:
+  username: magcho0527
 descprition: >
   ペンギンが好き
 
@@ -10,6 +16,8 @@ author:
   email: mail@magcho.com
   github: magcho
   twitter: magcho0527
+
+permalink: "/:year/:i_month/:i_day/:title/"
 
 # paginate: 3
 # paginate_path: "page:num"
@@ -27,10 +35,7 @@ exclude:
   - Gemfile.lock
 
 gems:
-  # - jekyll-paginate
-  # - jekyll-feed
   - jekyll-paginate-v2
-  # - jekyll-pug
 
 # Pagination Settings
 pagination:
