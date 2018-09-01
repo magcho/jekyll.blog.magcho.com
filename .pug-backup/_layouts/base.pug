@@ -1,0 +1,49 @@
+---
+---
+<!DOCTYPE html>
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    title {{ site.title }}
+    meta(name="viewport" content="width=device-width")
+    link(rel="stylesheet" href="{{'assets/css/base.css' | relateve_url}}")
+    <link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
+      
+  body
+    header
+      .title {{ site.title }}
+      slide.sns-link
+    
+    div.mainframe
+      | {{ content }}
+      aside.category-link
+        h1.title Category
+        ul
+          | {% for category in site.categories %}
+          li
+            a(href="{{ category | first | relateve_url }}") {{ category | first }}
+          | {% endfor %}
+
+      aside.tag-link
+        h1.title Tag
+        ul
+          | {% for tag in site.tags %}
+          li
+            a(href="{{ tag | first | relateve_url }}") {{ tag | first }}
+          | {% endfor %}
+    div.pagenate
+      | {% if paginator.total_pages > 1 %}
+      ul
+        | {% if paginator.previous_page %}
+        li
+          a(href="{{ paginator.previous_page_path | prepend: site.baseurl }}") Newer
+        | {% endif %}
+        | {% if paginator.next_page %}
+        li
+          a(href="{{ paginator.next_page_path | prepend: site.baseurl }}") Older
+        | {% endif %}
+      | {% endif %}
+        
+    footer
+      p.copyright
+        | (C)copyright magcho 2018-

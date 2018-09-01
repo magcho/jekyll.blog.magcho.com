@@ -1,5 +1,21 @@
 ---
-layout: default
+layout: base
 ---
 
-{{ content }}
+<main>
+  {% include colorRule.html post-category = page.category %}
+  <article>
+    <div class="contnet-header">
+      <h1 class="title"><a href="{{ post.url | relative_url }}" style="background-image: linear-gradient(to right, {{ postColor }} 0%, {{ postColor }} 100%);">{{ page.title }}</a></h1>
+      <div class="date">{% include penguin-shadow.html penguinColor = postColor %}
+        <p>
+          <time datetime="{{ page.date | date: '%Y-%m-%d'}}">{{ page.date | date: '%m/%d' }}</time>
+        </p>
+      </div>
+    </div>
+    <div class="content-body">{{ content }}</div>
+    <ul class="content-tags">{% for tag in page.tags %}
+      <li><a href="{{site.baseurl}}/{{tag}}">{{ tag }}</a></li>{% endfor %}
+    </ul>
+  </article>
+</main>

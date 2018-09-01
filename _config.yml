@@ -1,0 +1,41 @@
+title: magchoの雑記
+descprition: >
+  ペンギンが好き
+
+baseurl: "https://blog.magcho.com"
+url: "https://blog.magcho.com"
+
+author:
+  name: magcho
+  email: mail@magcho.com
+  github: magcho
+  twitter: magcho0527
+
+# paginate: 3
+# paginate_path: "page:num"
+
+sass:
+  style: expanded  #整形
+  sass_dir: _sass
+  # style: compressed   #圧縮
+
+
+exclude:
+  - .pug-backup
+  - vendor
+
+plugins:
+  # - jekyll-paginate
+  # - jekyll-feed
+  - jekyll-paginate-v2
+  # - jekyll-pug
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/page/:num/'
+  # title_suffix: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true

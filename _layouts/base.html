@@ -1,0 +1,63 @@
+---
+---
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8"/>
+    <title>{{ site.title }}</title>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css"/><link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="title">{{ site.title }}</div>
+      <slide class="sns-link"></slide>
+    </header>
+    <div class="mainframe">{{ content }}
+      <aside class="category-link">
+        <h1 class="title">Category</h1>
+        <ul>
+          {% for category in site.categories %}
+            {% assign categoryName = category[0] %}
+            {% include categoryRule.html post-category=categoryName %} <!-- Return: permalinkURL -->
+            <li>
+              <a href="{{site.baseurl}}/{{permalinkURL}}/">
+                {{ category[0] }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </aside>
+      <aside class="tag-link">
+        <h1 class="title">Tag</h1>
+        <ul>{% for tag in site.tags %}
+          <li><a href="{{ site.baseurl }}/tags.html#{{ tag | first }}">{{ tag | first }}</a></li>{% endfor %}
+        </ul>
+      </aside>
+    </div>
+    <div class="pagenate">
+      {% if paginator.total_pages > 1 %}
+        {% if paginator.previous_page %}
+        <div class="previous">
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">
+            <img src="{{ site.baseurl }}/assets/images/penguin-previous.svg" alt="Previous">
+            <p>←Previous</p>
+          </a>
+        </div>
+        {% endif %}
+
+        {% if paginator.next_page %}
+        <div class="next">
+          <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">
+            <img src="{{ site.baseurl }}/assets/images/penguin-next.svg" alt="Next">
+            <p>Next→</p>
+          </a>{% endif %}
+        </div>
+
+      {% endif %}
+    </div>
+    <footer>
+      <p class="copyright">(C)copyright magcho 2018-</p>
+    </footer>
+  </body>
+</html>

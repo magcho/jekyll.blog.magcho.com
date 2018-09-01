@@ -5,3 +5,7 @@
 node_modules
 _site
 Gemfile.lock
+
+vendor/
+
+.DS_Store

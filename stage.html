@@ -1,0 +1,35 @@
+---
+layout: base
+---
+{% assign cate-page = '舞台技術' %}
+{% include colorRule.html post-category = cate-page %}
+<main>
+  <h1>タグ別記事</h1>
+  {% for category in site.categories %}
+    {% if category[0] == cate-page %}
+    <article id="{{tag[0]}}">
+      <div class="contnet-header" >
+        <h1 class="title">
+          <a style="background-image: linear-gradient(to right, {{ postColor }} 0%, {{ postColor }} 100%);">
+            {{ category[0] }}
+          </a>
+        </h1>
+        <div class="date">
+          {% include penguin-shadow.html penguinColor = postColor %}
+        </div>
+      </div>
+      <div class="content-body tag-list">
+        <ul>
+          {% for post in category[1] %}
+          <li>
+            <a href="{{ post.url }}">
+              {{ post.title }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </article>
+    {% endif %}
+  {% endfor %}
+</main>

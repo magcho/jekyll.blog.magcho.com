@@ -1,0 +1,10 @@
+{% if include.post-category == "舞台技術" %}  <!-- stage -->
+{% assign permalinkURL = "stage" %}
+{% elsif include.post-category == "日記" %}  <!-- diary -->
+{% assign permalinkURL = "diary" %}
+{% elsif include.post-category == "電子工作" %} <!-- electronic -->
+{% assign permalinkURL = "electronic" %}
+{% elsif include.post-category == "プログラム" %} <!-- programming -->
+{% assign permalinkURL = "programming" %}
+{% else %}
+{% endif %}

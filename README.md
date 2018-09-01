@@ -50,3 +50,8 @@ To add a custom directory to your theme-gem, please edit the regexp in `penguin.
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
+
+
+# 素材
+
+- [ペンギン画像](http://kage-design.com/wp/?p=211)
