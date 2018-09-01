@@ -1,0 +1,25 @@
+---
+layout: base
+pagination: 
+  enabled: true
+---
+main
+  | {% for post in paginator.posts %}
+  | {% include colorRule.html post-category = post.category %}
+  article
+    .contnet-header
+      h1.title
+        a(href="{{ post.url | relateve_url }}" style="background-image: linear-gradient(to right, {{ postColor }} 0%, {{ postColor }} 100%);") {{ post.title }}
+      .date
+        | {% include penguin-shadow.html penguinColor = postColor %}
+        p
+          time(datetime="{{ post.date | date: '%Y-%m-%d'}}") {{ post.date | date: '%m/%d' }}
+    .content-body
+      | {{ post.content }}
+    ul.content-tags
+      | {% for tag in post.tags %}
+      li
+        a(href="{{site.baseurl}}/{{tag}}") {{ tag }}
+      | {% endfor %}
+
+  | {% endfor %}
