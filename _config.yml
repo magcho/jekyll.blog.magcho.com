@@ -26,7 +26,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-plugins:
+gems:
   # - jekyll-paginate
   # - jekyll-feed
   - jekyll-paginate-v2
