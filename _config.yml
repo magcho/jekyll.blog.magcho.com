@@ -22,6 +22,7 @@ sass:
 
 exclude:
   - .pug-backup
+  - vendor
 
 plugins:
   # - jekyll-paginate
