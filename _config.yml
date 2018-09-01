@@ -17,6 +17,8 @@ author:
   github: magcho
   twitter: magcho0527
 
+permalink: "/:year/:i_month/:i_day/:title/"
+
 # paginate: 3
 # paginate_path: "page:num"
 
