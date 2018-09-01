@@ -23,6 +23,8 @@ sass:
 exclude:
   - .pug-backup
   - vendor
+  - Gemfile
+  - Gemfile.lock
 
 plugins:
   # - jekyll-paginate
