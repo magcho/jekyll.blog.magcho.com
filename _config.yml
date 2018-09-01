@@ -1,4 +1,10 @@
 title: magchoの雑記
+subtitle: magchoのなんでもブログ
+repository: magcho/jekyll-penguin
+author: magcho
+branch: master
+twitter:
+  username: magcho0527
 descprition: >
   ペンギンが好き
 
@@ -23,12 +29,11 @@ sass:
 exclude:
   - .pug-backup
   - vendor
+  - Gemfile
+  - Gemfile.lock
 
-plugins:
-  # - jekyll-paginate
-  # - jekyll-feed
+gems:
   - jekyll-paginate-v2
-  # - jekyll-pug
 
 # Pagination Settings
 pagination:
