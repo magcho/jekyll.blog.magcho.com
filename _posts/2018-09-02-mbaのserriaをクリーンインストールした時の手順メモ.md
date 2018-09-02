@@ -57,7 +57,7 @@ $ mas list >> mas_list.txt
 
 ６. インストール一覧からシェルスクリプトを作る
 
-{% gist 5023c8d38d325b6578112807c1fd46b2.js %}
+{% gist 5023c8d38d325b6578112807c1fd46b2 %}
 
 [macを引っ越す時にアプリを一括インストールするスクリプト](https://gist.github.com/5023c8d38d325b6578112807c1fd46b2)
 
