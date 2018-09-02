@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Homebrew Caskで特定のアプリがインストールできなくなった話
-category: プログラム
+category: プログラミング
 tag: Homebrew
 ---
 ## 状況説明
