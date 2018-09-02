@@ -37,7 +37,9 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-gems:
+
+plugins:
+  - jekyll-gist
   - jekyll-paginate-v2
 
 # Pagination Settings
