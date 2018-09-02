@@ -73,6 +73,7 @@ body {
     }
 
     article {
+      z-index: 2;
       margin: 2em 0;
       position: relative;
       padding: 0.5em 1.5em;
@@ -176,6 +177,15 @@ body {
           margin: {
             top: 2em;
           }
+        }
+        // markdown style
+        img{
+          width: 100%;
+          height: auto;
+        }
+        pre{
+          overflow-x: scroll;
+          background-color: #8e8e8e;
         }
       }
       .tag-list{

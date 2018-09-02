@@ -19,6 +19,9 @@ author:
 
 permalink: "/:year/:i_month/:i_day/:title/"
 
+timezone: Asia/Tokyo
+future: false
+
 # paginate: 3
 # paginate_path: "page:num"
 
