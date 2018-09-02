@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MBAのSerriaをクリーンインストールした時の手順メモ
-category: プログラム
+category: プログラミング
 tag: mac
 ---
 **自分用のメモ記事なので、参考程度にどうぞ。**

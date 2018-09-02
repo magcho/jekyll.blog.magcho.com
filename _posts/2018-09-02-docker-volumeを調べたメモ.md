@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Docker volumeを調べたメモ
-category: プログラム
+category: プログラミング
 tag: Docker
 ---
 完全にメモ書きになってるのでEvernoteにでも書けよって感じ。
