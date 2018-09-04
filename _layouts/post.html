@@ -14,8 +14,21 @@ layout: base
       </div>
     </div>
     <div class="content-body">{{ content }}</div>
-    <ul class="content-tags">{% for tag in page.tags %}
-      <li><a href="{{site.baseurl}}/{{tag}}">{{ tag }}</a></li>{% endfor %}
+    <ul class="content-tags">
+      {% if page.category %}
+      <li>
+        {% assign categoryName = page.category %}
+        {% include categoryRule.html post-category=categoryName %}<!-- Return: permalinkURL -->
+        <a href="{{site.baseurl}}/{{permalinkURL}}">【{{page.category}}】</a>
+      </li>
+      {% endif %}
+      {% for tag in page.tags %}
+      <li>
+        <a href="{{site.baseurl}}/tags#{{tag}}">
+          {{ tag }}
+        </a>
+      </li>
+      {% endfor %}
     </ul>
   </article>
 </main>
