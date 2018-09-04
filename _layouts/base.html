@@ -14,8 +14,10 @@
   </head>
   <body>
     <header>
-      <div class="title">{{ site.title }}</div>
-      <slide class="sns-link"></slide>
+      <a href="{{site.baseurl}}">
+        <div class="title">{{ site.title }}</div>
+        <aside class="sns-link"></aside>
+      </a>
     </header>
     <div class="mainframe">{{ content }}
       <aside class="category-link">
