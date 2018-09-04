@@ -3,8 +3,17 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125180742-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-125180742-2');
+    </script>
     <meta charset="utf-8"/>
-    <title>{{ site.title }}</title>
+    <title>{% if page.title %}{{page.title}} | {% endif %}{{site.title}}</title>
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css"/><link href="https://fonts.googleapis.com/earlyaccess/mplus1p.css" rel="stylesheet" />
     <!-- highlight.js -->
