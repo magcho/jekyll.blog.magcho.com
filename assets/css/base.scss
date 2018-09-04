@@ -186,6 +186,19 @@ body {
         pre{
           overflow-x: scroll;
         }
+        table{
+          th{
+            background:{
+              color: #f7f7f7;
+            }
+            border: 1px solid #ddd;
+            padding: 5px 12px;
+          }
+          td{
+            border: 1px solid #ddd;
+            padding: 5px 12px;
+          }
+        }
       }
       .tag-list{
         ul{
