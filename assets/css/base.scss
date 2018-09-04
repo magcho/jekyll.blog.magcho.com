@@ -79,6 +79,8 @@ body {
       padding: 0.5em 1.5em;
       border-top: dashed 1px black;
       border-bottom: dashed 1px black;
+      font-family: '游ゴシック体', 'Yu Gothic', 'YuGothic', 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', 'Osaka', 'ＭＳ Ｐゴシック', 'MS PGothic', 'sans-serif';
+      word-wrap: break-word;
 
       &:after,
       &:before {
@@ -101,7 +103,10 @@ body {
 
       p {
         margin: 0;
+        margin-bottom: 1em;
         padding: 0;
+        line-height: 1.5em;
+        letter-spacing: 0.03em;
       }
       h1.title {
         font: {
@@ -179,6 +184,7 @@ body {
           }
         }
         // markdown style
+
         img{
           width: 100%;
           height: auto;
