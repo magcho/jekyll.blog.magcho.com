@@ -55,6 +55,13 @@ body {
       font-size: 3em;
       @include vertical-center(200px);
     }
+    a{
+      color: white;
+      text-decoration: none;
+      &:hover{
+        color: #ddd;
+      }
+    }
   }
 
   main {
