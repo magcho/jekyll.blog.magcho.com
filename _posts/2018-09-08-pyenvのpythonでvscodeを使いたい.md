@@ -12,4 +12,4 @@ vscodeはシステムのpip コマンドを用いてpython-lintをインスト�
 $ pyenv install {任意のバージョン}
 ```
 
-でもこれではvscodeがpipを
+でもこれではvscodeがpip
