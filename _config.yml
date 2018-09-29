@@ -8,8 +8,8 @@ twitter:
 descprition: >
   ペンギンが好き
 
-baseurl: "https://blog.magcho.com"
-url: "https://blog.magcho.com"
+baseurl: "https://jekyll.blog.magcho.com"
+url: "https://jekyll.blog.magcho.com"
 
 author:
   name: magcho
